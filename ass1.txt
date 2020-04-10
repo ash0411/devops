@@ -1,0 +1,5 @@
+# for using cal for 10 sec and storing it in a.txt
+endtime=$(date -ud "10 seconds" +%s); while [[ $(date -u +%s) -le $endtime ]]; do cal >> a.txt; done
+# for using 1 mkdir for making a file structure
+$mkdir -p A/{B/{D/{I/M/Z,J/L/Z},E/H/L/Z},C/{F/H/L/Z,G/K/L/Z}}
+
