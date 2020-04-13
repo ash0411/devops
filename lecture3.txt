@@ -1,0 +1,15 @@
+docker create( will make init container)
+## docker operations##
+when the parent process is running(in background) you can run child process 
+docker exec -it ash123 sh( for intracting with shell)
+docker run --rm alpine ifconfig(--rm removes the container automatically)
+## who decide parent process for a container##
+docker run -it --rm alpine (you will get a terminal ) ( so if you don't define any parent process than default parent process runs)
+it is decided by the developer of docker image
+##how to check parent process of python image
+docker inspect name_of_image(and there you can default process in cmd)
+here we are dumping image internals
+## main agenda
+to create our own docker image
+
+

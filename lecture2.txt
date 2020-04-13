@@ -1,0 +1,22 @@
+important notes
+docker can not be installed without using linux support (can see screenshot)
+# basic setup 
+export DOCKER_HOST="tcp://52.204.127.145:2375"
+
+
+docker search( search an image)
+docker pull(pull an image)
+docker images( see the list of images)
+# to create a container
+docker run name_of_image:tag_name(default latest) 	 	
+docker ps(list of running container)
+docker ps -a (will show list of all the container)
+# right way to create a container
+docker run --name [name] -d(putting the output on the background) alpine ping facebook.com(the name should be unique and small letters)
+# to stop container
+docker kill name
+docker start name
+docker stop name
+docker rm name ( for complete removal of container)
+stop and kill are similiar 
+kill will not remove container from list but rm will remove container from system 
