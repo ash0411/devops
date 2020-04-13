@@ -1,0 +1,29 @@
+## task 1
+## for creating a new directory structure using only one mkdir command
+mkdir -p A/{B/{D/{I/M/Z,J/L/Z},E/H/L/Z},C/{F/H/L/Z,G/K/L/Z}}
+
+## task 2
+## for allowing only one user to use the date command
+which date
+chmod a-x usr/bin/date
+useradd -s usr/bin/date aashish
+setfacl -m u:aashish:rwx /usr/bin/date
+
+## task 3 
+## copy a file from one user to another without using root
+sudo -i
+adduser a
+adduser b
+su -b
+mkdir file
+touch file/task
+cp file/task /tmp
+chmod 777 /tmp/task
+su -b
+cp /tmp/task .
+su -a
+rm /tmp/task
+## task 4
+## to run cal command for 10 sec and store it in a file A
+endtime=$(date -ud "10 seconds" +%s); while [[ $(date -u +%s) -le $endtime ]]; do cal >> a.txt; done
+
